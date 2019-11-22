@@ -1,7 +1,7 @@
 import requests
 from config import URL, AUTH
 import tools
-from portfolio_creation import request_stock
+from portfolio_creation import get_asset
 
 
 if __name__ == '__main__':
@@ -10,4 +10,4 @@ if __name__ == '__main__':
     #print(r)
     #r = tools.convert_to_EUR("USD", 2)
     #print(r)
-    request_stock()
+    get_asset()
