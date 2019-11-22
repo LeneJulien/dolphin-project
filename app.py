@@ -6,7 +6,7 @@ from portfolio_creation import get_asset
 
 
 if __name__ == '__main__':
-	tmp = "{'ratio'=[9, 12, 18],'asset'=[2201],'bench'=null,'startDate'='2013-06-14','endDate'='2019-05-31','frequency':null}"
+	tmp = "{'ratio'=[9, 12, 18],'asset'=[2201],'start_date'='2013-06-14','end_date'='2019-04-18','frequency':null}"
 	r = post_data('ratio/invoke', tmp)
 	#r = get_data("asset?columns=ASSET_DATABASE_ID&columns=TYPE&columns=LABEL")
 	print(r)
