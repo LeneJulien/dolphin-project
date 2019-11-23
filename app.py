@@ -1,6 +1,6 @@
 import requests
 from config import URL, AUTH
-from tools import post_data
+from tools import post_data, get_data
 import tools
 from portfolio_creation import get_asset
 
