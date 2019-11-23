@@ -27,7 +27,7 @@ def convert_to_EUR(identifier, value, date=None, full_response=False):
 
 
 def objectives(x):
-	x1 = x[0] * 2.0
+	x1 = x[0] * 0.4
 	x2 = x[1] * 1.4
 	x3 = x[2] * 1.9
 	x4 = x[3] * 1.8
@@ -37,7 +37,7 @@ def objectives(x):
 	x8 = x[7] * 1.47
 	x9 = x[8] * 1.45
 	x10 = x[9] * 1.9
-	x11 = x[10]
+	x11 = x[10] * 5.0
 	x12 = x[11]
 	x13 = x[12]
 	x14 = x[13]
@@ -47,10 +47,10 @@ def objectives(x):
 	x18 = x[17]
 	x19 = x[18]
 	x20 = x[19]
-	return (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + x11 + x12 + x13 + x14 + x15 + x16 + x17 + x18 + x19 + x20)* 1
+	return (x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 + x10 + x11 + x12 + x13 + x14 + x15 + x16 + x17 + x18 + x19 + x20)* -1
 
 def constraint(x):
-	return x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] + x[10] + x[11] + x[12] + x[13] + x[14] + x[15] + x[16] + x[17] + x[18] + x[19] - 100
+	return (x[0] + x[1] + x[2] + x[3] + x[4] + x[5] + x[6] + x[7] + x[8] + x[9] + x[10] + x[11] + x[12] + x[13] + x[14] + x[15] + x[16] + x[17] + x[18] + x[19])* -1 + 100
 
 def optimize():
 	x0 = [1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6]
