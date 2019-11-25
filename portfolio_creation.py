@@ -26,7 +26,6 @@ def asset_sort(dic_asset):
 # date de fin 18/04/2019
 def asset_id_sort(assets):
     for data in assets:
-        print(data['ASSET_DATABASE_ID']['value'])
         r = get_data("asset/" + data['ASSET_DATABASE_ID']['value'] + "?columns=CURRENCY")
 
 
@@ -48,7 +47,6 @@ def select_assets(x):
             if key != '2201' and key != "1829" and assets[key]['12']['type'] != "error":
                 if float(assets[key]['12']['value'].replace(',', '.')) > 0.5:
                     if float(assets[key]['10']['value'].replace(',', '.')) < 0.5:
-                        print(assets[key]['10']['value'].replace(',', '.'))
                         tab.append([key, float(assets[key]['12']['value'].replace(',', '.')),
                                     float(assets[key]['13']['value'].replace(',', '.')),
                                     float(assets[key]['10']['value'].replace(',', '.'))])
@@ -185,7 +183,6 @@ def get_asset():
     x = get_value_asset(asset_dict)
     bestSharp = select_assets(x)
     selection = reduce_selection(bestSharp, stocks)
-    print(selection)
     global global_selected
     global_selected = selection
     assets, weight = optimize()
